@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 public class WinResultController {
 
     private final WinResultService winResultService;
-
     /**
      * 당첨 결과 전달
      */
