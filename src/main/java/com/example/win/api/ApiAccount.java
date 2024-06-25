@@ -1,6 +1,6 @@
 package com.example.win.api;
 
-import com.example.win.dto.request.WinRequestDto;
+import com.example.win.dto.request.LotteryWinRequestDto;
 import com.example.win.dto.response.WinResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
@@ -18,7 +18,7 @@ public class ApiAccount {
     public final static List<Map<String, Object>> failList
             = new ArrayList<>();
     @Async
-    public void depositPoint(String userId, WinRequestDto req){
+    public void depositPoint(String userId, LotteryWinRequestDto req){
         try {
             feignAccount.depositPoint(userId, WinResponseDto.from(req));
         }catch (Exception e){
