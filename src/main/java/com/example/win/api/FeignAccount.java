@@ -1,6 +1,5 @@
 package com.example.win.api;
 
-import com.example.win.dto.request.WinRequestDto;
 import com.example.win.dto.response.WinResponseDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
