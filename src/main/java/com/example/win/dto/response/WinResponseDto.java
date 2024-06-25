@@ -15,13 +15,13 @@ public record WinResponseDto(String type, Integer leftMonths, Long amount){
     public static WinResponseDto from(LotteryWinRequestDto winResult) {
         return new WinResponseDto(
                 "동행복권",
-                winResult.leftMonths(),
+                0,
                 winResult.amount());
     }
     public static WinResponseDto from(TotoWinRequestDto winResult) {
         return new WinResponseDto(
                 "토토",
-                winResult.leftMonths(),
+                0,
                 winResult.amount());
     }
 }

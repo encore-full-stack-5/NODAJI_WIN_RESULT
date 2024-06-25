@@ -8,7 +8,7 @@ public record PensionWinRequestDto(Integer leftMonths, Long amount){
         return WinResult.builder()
                 .resultId(null)
                 .type("연금복권")
-                .leftMonths(0)
+                .leftMonths(req.leftMonths)
                 .amount(req.amount())
                 .userId(userId)
                 .build();

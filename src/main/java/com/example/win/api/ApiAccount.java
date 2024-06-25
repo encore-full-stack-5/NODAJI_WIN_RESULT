@@ -24,7 +24,6 @@ public class ApiAccount {
         }catch (Exception e){
             Map<String, Object> map = new HashMap<>();
             map.put("userId", userId);
-            map.put("type", req.type());
             map.put("amount", req.amount());
             failList.add(map);
         }

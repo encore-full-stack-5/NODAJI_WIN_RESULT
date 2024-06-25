@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/win")
+@RequestMapping("/api/v1")
 public class WinResultController {
 
     private final WinResultService winResultService;

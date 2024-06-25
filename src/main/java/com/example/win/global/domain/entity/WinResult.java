@@ -24,15 +24,4 @@ public class WinResult {
     private String type;
     @Column(name = "USER_ID")
     private String userId;
-    public WinResult toEntity(String userId, LotteryWinRequestDto req){
-        return WinResult.builder()
-                .resultId(null)
-                .leftMonths(req.leftMonths())
-                .amount(req.amount())
-                .type(req.type())
-                .userId(userId)
-                .build();
-    }
-
-
 }
