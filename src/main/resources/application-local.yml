@@ -11,3 +11,5 @@ spring:
       hibernate:
         format_sql: true
     show-sql: true
+token:
+  secret: guess_secretguess_secretguess_secretguess_secret

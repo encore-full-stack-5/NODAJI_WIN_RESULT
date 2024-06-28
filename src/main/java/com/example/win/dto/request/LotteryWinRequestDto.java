@@ -3,7 +3,7 @@ package com.example.win.dto.request;
 
 import com.example.win.global.domain.entity.WinResult;
 
-public record LotteryWinRequestDto(Long amount){
+public record LotteryWinRequestDto(String userId, Long amount){
     public WinResult toEntity(String userId, LotteryWinRequestDto req){
         return WinResult.builder()
                 .resultId(null)

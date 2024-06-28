@@ -20,7 +20,7 @@ public class ApiAccount {
     @Async
     public void depositPoint(String userId, LotteryWinRequestDto req){
         try {
-            feignAccount.depositPoint(userId, WinResponseDto.from(req));
+            feignAccount.depositPoint(WinResponseDto.from(req));
         }catch (Exception e){
             Map<String, Object> map = new HashMap<>();
             map.put("userId", userId);

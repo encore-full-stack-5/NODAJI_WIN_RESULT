@@ -22,7 +22,7 @@ public class ScheduledDepositService {
     public void addPensionAmountToDeposit(){
         List<WinResult> allValidWinResults = winResultRepository.findAllValidWinResults();
         allValidWinResults.forEach(result -> {
-            feignAccount.depositPoint(result.getUserId(), WinResponseDto.from(result));
+            feignAccount.depositPoint(WinResponseDto.from(result));
             result.setLeftMonths(result.getLeftMonths() - 1);
         });
     }

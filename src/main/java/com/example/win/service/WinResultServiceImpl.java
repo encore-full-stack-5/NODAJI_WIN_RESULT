@@ -16,15 +16,15 @@ public class WinResultServiceImpl implements WinResultService{
     private final WinResultRepository winResultRepository;
     private final FeignAccount feignAccount;
     @Transactional
-    public void pensionWinResultProcess(String userId, PensionWinRequestDto req) {
-        winResultRepository.save(req.toEntity(userId, req));
+    public void pensionWinResultProcess(PensionWinRequestDto req) {
+        winResultRepository.save(req.toEntity(req));
     }
     @Transactional
-    public void lotteryWinResultProcess(String userId, LotteryWinRequestDto req) {
-        feignAccount.depositPoint(userId, WinResponseDto.from(req));
+    public void lotteryWinResultProcess( LotteryWinRequestDto req) {
+        feignAccount.depositPoint(WinResponseDto.from(req));
     }
     @Transactional
-    public void totoWinResultProcess(String userId, TotoWinRequestDto req) {
-        feignAccount.depositPoint(userId, WinResponseDto.from(req));
+    public void totoWinResultProcess(TotoWinRequestDto req) {
+        feignAccount.depositPoint(WinResponseDto.from(req));
     }
 }
