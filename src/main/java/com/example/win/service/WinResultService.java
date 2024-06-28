@@ -1,8 +1,12 @@
 package com.example.win.service;
 
 
-import com.example.win.dto.request.WinRequestDto;
+import com.example.win.dto.request.LotteryWinRequestDto;
+import com.example.win.dto.request.PensionWinRequestDto;
+import com.example.win.dto.request.TotoWinRequestDto;
 
 public interface WinResultService {
-    void winResultProcess(String userId, WinRequestDto req);
+    void pensionWinResultProcess(PensionWinRequestDto req);
+    void lotteryWinResultProcess(LotteryWinRequestDto req);
+    void totoWinResultProcess(TotoWinRequestDto req);
 }

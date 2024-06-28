@@ -1,6 +1,6 @@
 package com.example.win.global.domain.entity;
 
-import com.example.win.dto.request.WinRequestDto;
+import com.example.win.dto.request.LotteryWinRequestDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,15 +24,4 @@ public class WinResult {
     private String type;
     @Column(name = "USER_ID")
     private String userId;
-    public WinResult toEntity(String userId, WinRequestDto req){
-        return WinResult.builder()
-                .resultId(null)
-                .leftMonths(req.leftMonths())
-                .amount(req.amount())
-                .type(req.type())
-                .userId(userId)
-                .build();
-    }
-
-
 }

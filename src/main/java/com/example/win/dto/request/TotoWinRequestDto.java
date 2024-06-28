@@ -3,12 +3,12 @@ package com.example.win.dto.request;
 
 import com.example.win.global.domain.entity.WinResult;
 
-public record WinRequestDto(String type, Integer leftMonths, Long amount){
-    public WinResult toEntity(String userId, WinRequestDto req){
+public record TotoWinRequestDto(String userId, Long amount){
+    public WinResult toEntity(String userId, TotoWinRequestDto req){
         return WinResult.builder()
                 .resultId(null)
-                .type(req.type())
-                .leftMonths(req.leftMonths())
+                .type("토토")
+                .leftMonths(0)
                 .amount(req.amount())
                 .userId(userId)
                 .build();
